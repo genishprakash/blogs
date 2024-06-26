@@ -189,7 +189,39 @@
      ```
     - **Differences**
       - `more`: forward navigation and limited backward navigation.<br>
-      - `less`: both forward and backward navigation and also has search options. You can go to the beginning and the end of a file instantly. Plus you can switch to an editor (like open the file in vi or vim). It is noticeably quicker than editor for when the file is large.
+      - `less`: both forward and backward navigation and also has search options. You can go to the beginning and the end of a file instantly. 
+    
+## Some Useful Commands 
+
+1. `man` - **View a manual page**
+   - **Usage**:
+
+     ```bash
+     $ man command_name
+     #You view the manual page for every commands
+     #Example usage
+     $ man ls
+     ```
+2. `wc` - **Count the number of lines, words, and characters in a file**
+   - **Usage**:
+
+     ```bash
+     $ wc file_name
+     ```
+     - **Flags (Frequently used)**:
+     - `-c` -> **Count the number of characters**
+     - `-l` -> **Count the number of lines**
+     - `-w` -> **Count the number of words**
+
+     You can learn more about it [here](https://www.geeksforgeeks.org/wc-command-linux-examples/)
+
+3. `history` - **View the command history**
+   - **Usage**:
+
+     ```bash
+     $ history
+     ```
+    
 
 ## Network commands
 
@@ -298,7 +330,7 @@
      ```bash
      $ kill [pid]
      ```
-     - ** Flags**:
+    - ** Flags**:
        - `-9` -> **Kill the process forcefully**
        - `-15` -> **Kill the process gracefully**
 
@@ -338,7 +370,27 @@
     - **Flags (Frequently used)**:
        - `-R` -> **Change the owner of the files and its subdirectories**
 
+3. `sudo` - **Run a command as root user**
+   - **Usage**:
 
+     ```bash
+     $ sudo command
+     # Gives you the root user privileges.
+
+     #Example usage
+     $ sudo apt-get update
+     ```
+
+## Package manager
+
+1. `apt-get` - **Install a package**
+   - **Usage**:
+
+     ```bash
+     $ sudo apt-get install package_name
+     #root user privileges are used to install a package.
+     ```
+     
 ## Searching Finding and Manipulating data
 
 1. `grep` - **Search and manipulating text patterns in a file**
@@ -361,7 +413,7 @@
      ```bash
      $ sort file_name
      ```
-     - **Flags (Frequently used)**:
+    - **Flags (Frequently used)**:
        - `-r` -> **Reverse the order of the sort**
        - `-u` -> **Remove duplicate lines**
 3. `find` - **Find files**
@@ -373,7 +425,87 @@
      #Example command . Use type if necessary. 
      $ find . -name '*.txt'
      ```
-     - **Flags (Frequently used)**:
+    - **Flags (Frequently used)**:
        - `-name` -> **Find files with the pattern**
 
        You can learn more about it [here](https://www.geeksforgeeks.org/find-command-in-linux/)
+
+## Bash Related Commands
+
+1. Pipe Operator `|` - **Combines the list of commands**
+
+   - **Usage**:
+
+     ```bash
+     #The first command output is passed to the second command.
+     $ command1 | command2
+     ```
+    - Example usage:
+    
+      ```bash    
+      $ cat filename | sort
+      ```
+2. `printenv` - **Print environment variables**
+
+   - **Usage**: 
+
+     ```bash
+     $ printenv
+     #Print all the environment variables.
+     ```
+3. `xargs` - **Execute commands from a input**
+
+   - **Usage**: 
+
+     ```bash
+     $ xargs command
+     ```
+
+     
+   - **Example usage**
+
+     ```bash
+     $ pgrep firefox | xargs kill -9
+
+     $ find . -name "*.txt" | xargs rm
+
+     #xargs get input from previous command and execute it.
+     ```
+4. `sed` - **Search replace filtering text in a file and much more stuffs**
+
+   - **Usage**:
+
+     ```bash
+     $ sed 's/searchString/replaceString/' file_name
+     # s-String 
+
+     $ sed '1,2p' file_name
+     # Print the first two lines.
+     ```
+   - It can do much more other stuffs .You can learn from [here](https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/).
+
+5. `awk` - **Search and manipulate text patterns in a file**
+
+   - **Usage**:
+
+     ```bash
+     $ awk 'pattern' file_name
+     ```
+   - **Arguments (Frequently used)**:
+     - NR -> **Get the line number**
+     - NF -> **Get the number of fields**
+     
+   - **Example usage**
+
+     ```bash
+     $ awk '{print $0,$1}' file_name
+     # Print the first and second columns.
+     ```
+
+     It is similar to sed . There are lot more useful patterns.You can learn from [here] (https://www.geeksforgeeks.org/awk-command-unixlinux-examples/). 
+
+## Conclusion
+
+- These are some useful commands for a Software Engineer who just started with linux. 
+
+- I hope you like this article.
