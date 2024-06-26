@@ -245,7 +245,7 @@
       $ git stash list
       ```
     - You can learn more about it [here](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
-    - 
+    
 17. `git cherry-pick` - **Pick a specific commit**
 
     - Used to pick a specific commit on other branches and use them to our current branch.
