@@ -502,7 +502,7 @@
      # Print the first and second columns.
      ```
 
-     It is similar to sed . There are lot more useful patterns.You can learn from [here] (https://www.geeksforgeeks.org/awk-command-unixlinux-examples/). 
+     It is similar to sed . There are lot more useful patterns.You can learn from [here](https://www.geeksforgeeks.org/awk-command-unixlinux-examples/). 
 
 ## Conclusion
 
