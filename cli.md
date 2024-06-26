@@ -17,6 +17,7 @@
 
      ```bash
      $ ls # ls command used in home directory.
+
      Desktop Documents  Downloads     
      ```
 
@@ -53,7 +54,7 @@
      ```bash
      $ cd ./directory_name/subdirectory_name
      ```
-     We can also use [relative paths](https://www.codingrooms.com/blog/file-paths) to move to a certain folder.
+     You can also use [relative paths](https://www.codingrooms.com/blog/file-paths) to move to a certain folder.
     
    - **Absolute paths**
 
@@ -95,7 +96,7 @@
      ```
      This is the syntax to remove a directory.
 
-     If we want to ***remove a directory which contains files***, we can use this command.
+     If you want to ***remove a directory which contains files***, you can use this command.
 
      ```bash
      $ rm -r directory_name
@@ -122,5 +123,257 @@
      ```bash
      $ mv file_name destination
      ```
-     This is the syntax to move a file.To rename a file we can also use this command.
+     This is the syntax to move a file.To rename a file you can also use this command.
 
+## Viewing and Editing files
+
+1. `cat` - **View a file**
+   - **Usage**:
+
+     ```bash
+     $ cat file_name
+     ```
+     This is the syntax to view a file.
+
+     ```bash
+     $ cat > file_name
+     #Create a new file
+
+     $ cat file_name1 >> file_name2
+     #Append the contents of file_name1 to file_name2
+
+     $ cat -n file_name
+     #View a file with line numbers
+     ```
+
+     These are some stuffs used with cat commands. You can learn more about it [here](https://www.geeksforgeeks.org/cat-command-in-linux-with-examples/).
+
+2. `vi` , `nano` - **Edit a file**
+   - **Usage**:
+
+     ```bash
+     $ vi file_name
+
+     $ nano file_name
+     ```
+
+      There are lot more commands for editing files. You can learn more about it [here](https://www.geeksforgeeks.org/how-to-edit-text-files-in-linux/).
+
+3. `head` - **View the first 10 lines of a file**
+   - **Usage**: 
+
+     ```bash
+     $ head file_name
+     #View the first 10 lines of a file
+
+     $ head -n 10 file_name
+     #You can also specify the number of lines you want to view.
+     ```
+4. `tail` - **View the last 10 lines of a file**
+   - **Usage**:
+
+     ```bash
+     $ tail file_name
+     #View the last 10 lines of a file
+     $ tail -n 10 file_name
+     #You can also specify the number of lines you want to view.
+     ```
+5. `less` , `more` - **View a file in a detailed manner**
+   - **Usage**:
+
+     ```bash
+     $ less file_name
+     
+     $ more file_name
+     
+     ```
+    - **Differences**
+      - `more`: forward navigation and limited backward navigation.<br>
+      - `less`: both forward and backward navigation and also has search options. You can go to the beginning and the end of a file instantly. Plus you can switch to an editor (like open the file in vi or vim). It is noticeably quicker than editor for when the file is large.
+
+## Network commands
+
+1. `ping` - **Ping an IP address**
+   - **Usage**:
+
+     ```bash
+     $ ping google.com
+     # Checks the network connectivity to specific server.
+     ```
+2. `ifconfig` - **View wired network information**
+   - **Usage**: 
+
+     ```bash
+     $ ifconfig
+     # Displays the ip address and more stuffs related to network connection.
+     ```
+3. `iwconfig` - **View wireless network information**   
+   - **Usage**:
+
+     ```bash
+     $ iwconfig
+     ```
+4. `ssh` - **Securely connect to a remote server**
+
+   - **Usage**: 
+
+     ```bash
+     $ ssh [username]@[hostname or IP address]
+     ```
+5. `netstat` - **Network Statistics**
+   - **Usage**:
+
+     ```bash
+     $ netstat
+     ```
+   - **Flags**:
+     - `-a` -> **List all network connections**
+     - `-l` -> **List all listening ports**
+     - `-at`-> **List all network connections with TCP ports**
+     - `au` -> **List all network connections with UDP ports**
+
+     You can learn more about it [here](https://www.geeksforgeeks.org/netstat-command-linux/).
+
+## OS,Process Commands
+
+1. `ps` - **List all processes**   
+   - **Usage**:
+
+     ```bash
+     $ ps
+     ```
+   - **Flags (Commonly Used)**:
+     - `-ef` -> **List all the process of the entire system with parent pid**
+     - `-aux` ->**List all the process with the CPU and memory usage**  
+2. `pstree` - **List all processes in a tree format**
+   - **Usage**:
+
+     ```bash
+     $ pstree
+     ```
+     This image shows the senior most process with the sub process.
+
+     ![pstree](./assets/Screenshot%20from%202024-06-25%2018-22-18.png)
+3. `top` - **View running processes**
+   - **Usage**:
+
+     ```bash
+     $ top
+     #This command is used to view the running processes.
+     ```
+4. `df` - **View disk usage**
+   - **Usage**:
+     ```bash
+     $ df -h
+     #This command with -h is used ofter to display in human readable format.
+     ```    
+5. `uname` - **Unix name**
+
+   - **Usage**:
+
+     ```bash
+     $ uname
+     #Displays information about the system.
+     ```
+    - **Flags**:
+      - `-a` -> **Display all information**
+
+      You can learn more about it [here](https://www.geeksforgeeks.org/uname-command-in-linux-with-examples/)
+6. `free` - **View memory usage**
+   - **Usage**:
+     ```bash
+     $ free -h
+     #Displays memory usage in human readable format.
+     ```
+7. `lspci` - **List all the PCI devices**
+   - **Usage**:
+
+     ```bash
+     $ lspci
+     #displaying information about PCI buses in the system and devices connected to them..
+     ```
+8. `kill` - **Kill a process**
+   - **Usage**:
+
+     ```bash
+     $ kill [pid]
+     ```
+     - ** Flags**:
+       - `-9` -> **Kill the process forcefully**
+       - `-15` -> **Kill the process gracefully**
+
+       You can learn more about it [here](https://www.geeksforgeeks.org/kill-command-in-linux-with-examples/)
+
+## File permission 
+
+1. `chmod` - **Change file permission**
+   - **Usage**:
+
+     ```bash
+     $ chmod [permission] file_name
+     ```
+   - **Arguments**:
+     - `ugo` -> **User, Group and Others**
+     ```bash
+     $ chmod u+rwx g+rwx o+rwx file_name
+     #The user,group,others have read,write and execute the file.You can modify the permission.
+     ```
+   - **Binary Flags**
+     - Read (4) - Write (2) - Execute (1) the values are represented like this.
+
+     ```bash
+     $ chmod 755 file_name
+     #The file will be readable,writeable and executable for user and readable, executable for group and other.
+     ```
+     ![chmod](./assets/vkxuqbatopk21.jpeg)
+
+     - You can learn more about [here](https://www.geeksforgeeks.org/chmod-command-linux/)
+
+2. `chown` - **Change file owner**
+   - **Usage**:
+
+     ```bash
+     $ chown new_owner[:new_group] file_name
+     ```
+    - **Flags (Frequently used)**:
+       - `-R` -> **Change the owner of the files and its subdirectories**
+
+
+## Searching Finding and Manipulating data
+
+1. `grep` - **Search and manipulating text patterns in a file**
+
+   - **Usage**: 
+
+     ```bash
+     $ grep [pattern] file_name
+     ```
+   - **Flags (Frequently Used)**:
+     - `-i` -> **Case insensitive**
+     - `-l` -> **List the files that contain the pattern**
+     - `-o` -> **Print only the matched pattern**
+
+     You can learn more about it [here](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+2. `sort` - **Sort a file**
+
+   - **Usage**:
+
+     ```bash
+     $ sort file_name
+     ```
+     - **Flags (Frequently used)**:
+       - `-r` -> **Reverse the order of the sort**
+       - `-u` -> **Remove duplicate lines**
+3. `find` - **Find files**
+
+   - **Usage**:
+
+     ```bash
+     $ find [path] [type]-name pattern
+     #Example command . Use type if necessary. 
+     $ find . -name '*.txt'
+     ```
+     - **Flags (Frequently used)**:
+       - `-name` -> **Find files with the pattern**
+
+       You can learn more about it [here](https://www.geeksforgeeks.org/find-command-in-linux/)
