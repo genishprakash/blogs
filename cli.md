@@ -37,17 +37,17 @@
      ```bash
      $ cd directory_name 
      ```
-     cd  is used to move forward to the child directory.
+     `cd`   ->   used to move forward to the child directory.
 
      ```bash
      $ cd ..
      ```
-     cd .. is used to move backward to the parent directory.
+     `cd ..` _->_ used to move backward to the parent directory.
 
      ```bash
      $ cd ~
      ```
-      cd ~ is used to move to the home directory.
+      `cd ~` -> used to move to the home directory.
      
    - **Relative paths**
 
@@ -88,7 +88,7 @@
         $ mkdir -p directory_name/subdirectory_name
         ```
         This is the most commonly used flag . You can learn more about it [here](https://www.geeksforgeeks.org/mkdir-command-in-linux-with-examples/).
-3. 'rmdir' - **Remove a directory**
+3. `rmdir` - **Remove a directory**
    - **Usage**:
 
      ```bash
@@ -101,7 +101,7 @@
      ```bash
      $ rm -r directory_name
      ```
-4. 'rm' - **Remove a file** 
+4. `rm` - **Remove a file** 
    - **Usage**:
 
      ```bash
@@ -109,7 +109,7 @@
      ```
      This is the syntax to remove a file. You can learn more about it [here](https://www.ibm.com/docs/en/power6?topic=commands-rm-command).
 
-5. 'cp' - **Copy a file**
+5. `cp` - **Copy a file**
    - **Usage**:
 
      ```bash
@@ -117,7 +117,7 @@
      ```
      This is the syntax to copy a file.
 
-6. 'mv' - **Move a file**
+6. `mv` - **Move a file**
    - **Usage**: 
 
      ```bash
