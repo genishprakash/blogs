@@ -108,10 +108,18 @@
       $ git push origin -u branch_name
 
       ```
+9. `git fetch` - **Fetch changes from a remote branch**
 
-9. `git pull` - **Pull changes from a remote branch**
+    - It fetches the changes from the remote branch , but doesn't merge them.
 
-    - `pull` command is used to pull the changes from the remote branch.
+    - **Usage**:
+
+      ```bash
+      $ git fetch origin branch_name
+      ```
+10. `git pull` - **Pull changes from a remote branch**
+
+    - `pull` command is used to pull the changes from the remote branch and merge them.
 
     - **Usage**:
 
@@ -120,7 +128,7 @@
       ```
 
 
-10. `git branch` - **Manage branches**
+11. `git branch` - **Manage branches**
 
     - **Usage**:
 
@@ -132,7 +140,7 @@
       $ git branch -d branch_name
       ```
 
-11. `git merge` - **Merge branches**
+12. `git merge` - **Merge branches**
 
     - It merges the changes from one branch to another.
 
@@ -156,7 +164,7 @@
         ```
     ![merge](./assets/git/git-three-way-merging.png)
 
-12. `git log`, `git reflog` - **View the commit history**
+13. `git log`, `git reflog` - **View the commit history**
 
     - **Usage**:
 
@@ -168,7 +176,7 @@
       $ git reflog
       ```
 
-13. `git checkout`, `git switch` - **Switch branches**
+14. `git checkout`, `git switch` - **Switch branches**
 
     - **Usage**:
 
@@ -184,7 +192,7 @@
       $ git checkout -d branch_name
       ```
 
-14. `git reset`, `git revert`- **Go back to previous state**
+15. `git reset`, `git revert`- **Go back to previous state**
 
     - Both `reset` and `revert` are used to go back to previous state but `revert` creates a ***new commit*** with the previous state and `reset` go back to previous state without creating a new commit.
     ![revert](https://wac-cdn.atlassian.com/dam/jcr:a6a50d78-48e3-4765-8492-9e48dec8fd2f/04%20(2).svg?cdnVersion=1866)
@@ -204,7 +212,7 @@
       $ git reset --soft HEAD~n
       ```
 
-15. `git rebase` - **Rebase a branch**
+16. `git rebase` - **Rebase a branch**
 
     - A pretty useful commands which acts  like `git merge`.
     - The main difference is that `rebase` have a straight line of commits.
@@ -226,7 +234,7 @@
       ```bash
       $ git rebase -i 
       ```
-16. `git stash` - **Stash changes**
+17. `git stash` - **Stash changes**
 
     - It is like a temporary storage for a commit.You store those commit and pop them later.
     - **Usage**:
@@ -246,7 +254,7 @@
       ```
     - You can learn more about it [here](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
     
-17. `git cherry-pick` - **Pick a specific commit**
+18. `git cherry-pick` - **Pick a specific commit**
 
     - Used to pick a specific commit on other branches and use them to our current branch.
     - **Usage**:
@@ -256,7 +264,7 @@
       ```
     - You can learn more about it [here](https://www.atlassian.com/git/tutorials/cherry-pick)
 
-18. `git diff` - **View changes in a file**
+19. `git diff` - **View changes in a file**
     - Last but the most used and important command.
     - It helps to view all the changes in the file. 
 
